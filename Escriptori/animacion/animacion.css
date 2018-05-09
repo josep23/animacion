@@ -1,0 +1,49 @@
+
+
+@keyframes walk {
+  100% { background-position: -392px 0px; }
+}
+@keyframes out {
+  100% {margin-left: 4100px;}
+}
+@keyframes move{
+    100% { background-position:1680px 0px; }
+}
+@keyframes move-back{
+    100% { background-position:-1680px 0px; }
+}
+.background {
+	padding: 100px;
+  width: 4096px;
+  height: 768px;
+  border: thin solid black;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: 1;
+  background-image: url("fondo/fondo2.png");
+  animation: move-back 5s steps(1000) infinite;
+}
+
+.ground {
+  background-image: url("fondo/suelo.png");
+  width: 4096px;
+  height: 55px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: move-back 5s steps(1000) infinite;
+}
+
+
+.heroe {
+  bottom: 75px;
+  left: 50px;
+  width: 49px;
+  height: 46px;
+  position: absolute;
+  background-image: url("golpespuñosdef.png");
+  animation: walk 1s steps(8) infinite, out 10s steps(1000) infinite;
+  transform: scale(3);
+  z-index: 10;
+}
